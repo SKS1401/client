@@ -4,7 +4,7 @@ export function Filter () {
     return (
     <div>
         { categories.map((category,index) => (
-            <button class="b2" key={index}>{category}</button>
+            <button className="b2" key={index}>{category}</button>
         ))}
     </div>
     );

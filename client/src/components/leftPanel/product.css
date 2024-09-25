@@ -7,6 +7,10 @@
    
     
 }
+img {
+    height: 50px;
+    width: auto;
+}
 .products {
     border-width: 5px ;
     border-style: solid;
@@ -19,4 +23,5 @@
     background-color: rgb(145, 16, 16);
     color: white;
     font-weight: bold;
+    margin-top: 10px ;
 }

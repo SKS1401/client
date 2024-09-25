@@ -7,7 +7,7 @@ import { Product } from "./product";
       <div>
        <Heading/>
        <Filter/>
-      <Product/>
+      <Product   />
       </div>
     );
  }
