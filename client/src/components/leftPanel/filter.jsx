@@ -1,3 +1,4 @@
+import React from "react";
 export function Filter () {
     const categories=['Laptops','Gaming','Accessories','Peripherals','Storage','Components','Monitors','Printers','Product Section'];
 

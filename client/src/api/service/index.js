@@ -1,1 +1,2 @@
-export * as ProductService from './productService';
+import * as ProductService from './productService';
+export {ProductService};
