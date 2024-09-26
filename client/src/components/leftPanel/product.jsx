@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from "react";
 import { Product_card } from "./product_card";
 import './product.css';
@@ -6,11 +7,13 @@ import './product.css';
 export function Product() {
     const [products,setProduct]=useState([]);
     useEffect(()=> {
-        fetch('http://localhost:8000/api/products').then((res)=> res.json()).then((data)=>setProduct(data))
-        .catch((error)=> {
-            alert("Failed to Load Products!!");
-            console.log(error);
-        });
+        axios.get('http://localhost:8000/api/products').then((res)=> {
+          setProduct(res.data);
+        }).catch((error)=> {
+           alert("Failed to Load Products!!");
+           console.log(error);
+        })
+       
     },[]);
    // 
 
