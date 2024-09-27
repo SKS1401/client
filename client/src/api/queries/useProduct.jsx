@@ -1,12 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ProductService } from "../service";
 
 
 export const useProduct=()=> {
     const [products,setProduct]=useState([]);
     const [isLoading,setisLoading]=useState(false);
-    const loadProducts= async()=> {
+    const loadProducts= useCallback(()=>{ async()=> {
         try {
             setisLoading(true);
             const products = await ProductService.getProduct();
@@ -21,10 +21,11 @@ export const useProduct=()=> {
         }
         
     }  
+    },[]); 
    
    
     useEffect( ()=> {
         loadProducts();
-    },[]);
+    },[loadProducts]);
     return {products,isLoading};
 }
