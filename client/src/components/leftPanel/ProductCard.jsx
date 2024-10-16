@@ -1,6 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import { CartContext } from "../../App";
+import Button from '@mui/material/Button';
+import { CartContext } from "../../hooks/CartContextProvider";
+
 
 export function Product_card({a}) {
 const {AddToCart}=useContext(CartContext);
@@ -15,8 +17,10 @@ const {AddToCart}=useContext(CartContext);
         <img src={a.image} alt={a.name}/> 
          <h5>{a.name}</h5>
          <h5>${a.price}</h5>
-
-        <button class="b1" onClick={handleAddToCart} >Add to Cart</button>
+        <Button variant="contained"  onClick={handleAddToCart}>
+            Add to Cart
+        </Button>
+     
     </div>
     );
 }

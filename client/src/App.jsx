@@ -1,36 +1,36 @@
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import React from "react";
 import { useCart } from "./hooks";
 import { createContext, useState } from "react";
 import { Leftpanel } from './components/leftPanel/leftpanel';
 import { Rightpanel } from './components/rightPanel/rightpanel';
 import './App.css';
-export const CartContext=createContext();   
+import {Homepage} from './hooks/pages';
+import Contact from './hooks/pages/contacts/Contact';
 
- 
- function App(){
+import { CartContextProvider } from "./hooks/CartContextProvider";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (<Homepage />),
+  },
+  {
+    path: "/contacts",
+    element: (<Contact/>),
+  },
+]);
+
+ function App() {
+
   ///next din class shurur age app function ekdom neat & clean korte hobe
-  
-  const {cart,AddToCart,RemoveFromCart}=useCart();
   return (
-
-<CartContext.Provider value={{
-    cart,
-    AddToCart,
-    RemoveFromCart,
-  }}
-  >
-  
-    <div className="App">
-  
-    <Leftpanel    />
-    <Rightpanel    />
-    </div>
-   </CartContext.Provider>
- );
-}     
-
+     <RouterProvider router={router} />
+  );
  
-
-
+ }
 
 export default App;

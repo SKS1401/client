@@ -1,7 +1,8 @@
 import React from 'react';
 import { useContext } from 'react';
 import './product.css';
-import { CartContext } from '../../App';
+import { CartContext } from '../../hooks/CartContextProvider';
+
 export function CartItem({cartItem}) {
   const {RemoveFromCart}=useContext(CartContext);
     const handleRemoveFromCart=()=> {

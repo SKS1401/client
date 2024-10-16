@@ -1,5 +1,5 @@
 import React from "react";
-import { Product_card } from "./product_card";
+import { Product_card } from "./ProductCard";
 import './product.css';
 
 import { useProduct } from "../../api/queries/useProduct";

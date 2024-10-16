@@ -1,0 +1,37 @@
+.contact-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #636669;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+.map {
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
